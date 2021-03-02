@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: contoso-api
+  labels:
+    app: contoso-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: contoso-api
+  template:
+    metadata:
+      labels:
+        app: contoso-api
+    spec:
+      tolerations:
+        - key: kubernetes.io/os
+          operator: Equal
+          value: windows
+          effect: NoSchedule
+      nodeSelector:
+        "beta.kubernetes.io/os": windows
+      containers:
+        - name: contoso-api
+          image: "workshoprrp.azurecr.io/contosoapi:03012021"
+          imagePullPolicy: Always
+          env:
+            - name: CONNSTR_AnimalContext
+              valueFrom:
+                secretKeyRef:
+                  name: contoso-bicycle
+                  key: animaldb
+          ports:
+            - name: http
+              containerPort: 80
+      imagePullSecrets:
+      - name: regcred

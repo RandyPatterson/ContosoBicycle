@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: contoso-web
+  labels:
+    app: contoso-web
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: contoso-web
+  template:
+    metadata:
+      labels:
+        app: contoso-web
+    spec:
+      tolerations:
+        - key: kubernetes.io/os
+          operator: Equal
+          value: windows
+          effect: NoSchedule
+      nodeSelector:
+        "beta.kubernetes.io/os": windows
+      containers:
+        - name: contoso-web
+          image: "workshoprrp.azurecr.io/contosobicycle:03012021"
+          imagePullPolicy: Always
+          env:
+            - name: APPSETTING_APIURL
+              valueFrom:
+                secretKeyRef:
+                  name: contoso-bicycle
+                  key: APIURL
+          ports:
+            - name: http
+              containerPort: 80
+      imagePullSecrets:
+      - name: regcred
