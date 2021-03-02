@@ -1,0 +1,42 @@
+﻿@model ContosoBicycle.Models.HealthCheckViewModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron" style="background-color:white">
+    <h1>Contoso Bicycle</h1>
+    <img src="~/Content/bike.jpg" width="50%" height="50%" />
+</div>
+
+<h2>Health Check</h2>
+<h3>
+    <div class="row ">
+        <div class="col-md-2 text-right">
+            Web Host:
+        </div>
+        <div class="col-md-4">
+            @ViewBag.LocalIp
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-2 text-right">
+            API Host:
+        </div>
+        <div class="col-md-4">
+            @Html.DisplayFor(m => m.HostName)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2 text-right">
+            DB Data:
+        </div>
+        <div class="col-md-4">
+            @foreach (var animal in Model.Data)
+            {
+                @animal <br />
+            }
+        </div>
+    </div>
+</h3>
