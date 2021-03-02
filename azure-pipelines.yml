@@ -1,3 +1,6 @@
+# Build and test ASP.NET projects.
+# Add steps that publish symbols, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4
 # ASP.NET
 trigger:
 - main
@@ -30,10 +33,17 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'DockerRegistry'
-    repository: 'Contoso'
+    repository: 'ContosoBicycle'
     command: 'buildAndPush'
     Dockerfile: 'ContosoBicycle/Dockerfile'
     buildContext: 'ContosoBicycle'
-# Build and test ASP.NET projects.
-# Add steps that publish symbols, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4
+
+
+- task: Docker@2
+  inputs:
+    containerRegistry: 'DockerRegistry'
+    repository: 'Contosoapi'
+    command: 'buildAndPush'
+    Dockerfile: 'Contoso.APi/Dockerfile'
+    buildContext: 'Contoso.APi'
+
