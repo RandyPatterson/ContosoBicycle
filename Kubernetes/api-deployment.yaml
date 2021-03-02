@@ -23,7 +23,7 @@ spec:
         "beta.kubernetes.io/os": windows
       containers:
         - name: contoso-api
-          image: "workshoprrp.azurecr.io/contosoapi:{{Build.BuildId}}"
+          image: "workshoprrp.azurecr.io/contosoapi:latest"
           imagePullPolicy: Always
           env:
             - name: CONNSTR_AnimalContext

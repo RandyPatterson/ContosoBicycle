@@ -23,7 +23,7 @@ spec:
         "beta.kubernetes.io/os": windows
       containers:
         - name: contoso-web
-          image: "workshoprrp.azurecr.io/contosobicycle:{{Build.BuildId}}"
+          image: "workshoprrp.azurecr.io/contosobicycle:latest"
           imagePullPolicy: Always
           env:
             - name: APPSETTING_APIURL
