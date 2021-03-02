@@ -4,12 +4,24 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron" style="background-color:white">
-    <h1>Contoso Bicycle</h1>
-    <img src="~/Content/bike.jpg" width="50%" height="50%" />
-</div>
+<h1>
+    <div>
+        <h1>Contoso Bicycle</h1>
+        <img src="~/Content/bike.jpg" />
+    </div>
+</h1>
 
 <h2>Health Check</h2>
+@if (!Model.Error.IsEmpty())
+{
+<h3>
+    <div class="row">
+        <div class="col-md-6 alert-danger">
+            @Html.DisplayFor(m => m.Error)
+        </div>
+    </div>
+</h3>
+}
 <h3>
     <div class="row ">
         <div class="col-md-2 text-right">
@@ -39,4 +51,5 @@
             }
         </div>
     </div>
+
 </h3>

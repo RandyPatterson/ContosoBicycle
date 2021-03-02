@@ -7,12 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoBicycle", "ContosoBi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contoso.Api", "Contoso.Api\Contoso.Api.csproj", "{57F66E40-24BF-4AA9-A68B-490D2CF0D2B2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Kubernetes", "Kubernetes", "{27B19EF6-0FD4-4A42-B373-0A1BBBA171F4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Kubernetes", "Kubernetes", "{B9647810-BE32-43FF-BE2D-16E33E254C1D}"
 	ProjectSection(SolutionItems) = preProject
-		api-deployment.yaml = api-deployment.yaml
-		api-service.yaml = api-service.yaml
-		web-deploy.yaml = web-deploy.yaml
-		web-service.yaml = web-service.yaml
+		Kubernetes\api-deployment.yaml = Kubernetes\api-deployment.yaml
+		Kubernetes\api-service.yaml = Kubernetes\api-service.yaml
+		Kubernetes\web-deploy.yaml = Kubernetes\web-deploy.yaml
+		Kubernetes\web-service.yaml = Kubernetes\web-service.yaml
 	EndProjectSection
 EndProject
 Global
