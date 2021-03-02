@@ -47,3 +47,9 @@ steps:
     Dockerfile: 'Contoso.APi/Dockerfile'
     buildContext: 'Contoso.APi'
 
+- task: KubernetesManifest@0
+  inputs:
+    action: 'deploy'
+    kubernetesServiceConnection: 'aks-k8s-cluster'
+    namespace: 'default'
+    manifests: './kubernetes/'
