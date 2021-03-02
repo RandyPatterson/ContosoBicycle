@@ -52,4 +52,7 @@ steps:
     action: 'deploy'
     kubernetesServiceConnection: 'aks-k8s-cluster'
     namespace: 'default'
-    manifests: './kubernetes/'
+    manifests: 'kubernetes/api-deployment.yaml|kubernetes/api-service.yaml|kubernetes/web-deployment.yaml|kubernetes/web-service.yaml'
+    containers: |
+      workshoprrp.azurecr.io/contosoapi:$(Build.BuildId)
+      workshoprrp.azurecr.io/contosobicycle:$(Build.BuildId)
