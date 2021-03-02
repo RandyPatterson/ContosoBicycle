@@ -165,6 +165,7 @@
     <Content Include="entrypoint\WebconfigOverride.ps1">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\docker.pubxml" />
     <None Include="Properties\PublishProfiles\workshoprrp.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />

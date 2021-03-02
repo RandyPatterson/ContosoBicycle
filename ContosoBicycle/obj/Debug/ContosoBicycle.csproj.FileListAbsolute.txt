@@ -61,3 +61,4 @@ C:\Projects\ContosoBicycle\ContosoBicycle\bin\roslyn\vbc.exe.config
 C:\Projects\ContosoBicycle\ContosoBicycle\bin\roslyn\vbc.rsp
 C:\Projects\ContosoBicycle\ContosoBicycle\bin\roslyn\VBCSCompiler.exe
 C:\Projects\ContosoBicycle\ContosoBicycle\bin\roslyn\VBCSCompiler.exe.config
+C:\Projects\ContosoBicycle\ContosoBicycle\obj\Debug\ContosoBicycle.csprojAssemblyReference.cache
