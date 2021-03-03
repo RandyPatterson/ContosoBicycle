@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  contosobicycle:
+    ports:
+      - "80"
+
+  contoso.api:
+    ports:
+      - "80"
+

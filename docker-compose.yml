@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+  contosobicycle:
+    image: ${DOCKER_REGISTRY-}contosobicycle
+    build:
+      context: .\ContosoBicycle
+      dockerfile: Dockerfile
+    environment:
+      APPSETTING_APIURL: "http://contoso.api/api/healthcheck"
+    depends_on:
+      - contoso.api
+
+  contoso.api:
+    image: ${DOCKER_REGISTRY-}contosoapi
+    build:
+      context: .\Contoso.Api
+      dockerfile: Dockerfile
+    environment:
+      CONNSTR_AnimalContext: "connection_string"
+
+

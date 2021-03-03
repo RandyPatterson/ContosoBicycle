@@ -16,12 +16,17 @@ namespace Contoso.Api.Controllers
         public IHealthCheckModel Get()
         {
             List<string> data = new List<string>();
-            data.AddRange(db.Animals.Select(r => r.DisplayName).ToArray());
-            return new HealthCheckModel
+            var model = new HealthCheckModel { Data = data, HostName = GetLocalIPAddress() };
+            try
             {
-                HostName = GetLocalIPAddress(),
-                Data = data
-            };
+                data.AddRange(db.Animals.Select(r => r.DisplayName).ToArray());
+            }
+            catch (Exception e)
+            {
+                model.Error = e.Message;
+            }
+
+            return model;
         }
 
         private string GetLocalIPAddress()

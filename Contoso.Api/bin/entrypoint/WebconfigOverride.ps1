@@ -2,6 +2,8 @@ param (
     [string]$webConfig = "c:\inetpub\wwwroot\Web.config"
 )
 
+iisreset stop
+
 $doc = (Get-Content $webConfig) -as [Xml];
 $modified = $FALSE;
 
@@ -23,7 +25,7 @@ Get-ChildItem env:* | ForEach-Object {
         $connStr = $doc.configuration.connectionStrings.add | Where-Object {$_.name -eq $key};
         if ($connStr) {
             $connStr.connectionString = $_.Value;
-            Write-Host "Replaced connectionString" $_.Key $_.Value.Substring(0,10) "....";
+            Write-Host "Replaced connectionString" $_.Key $_.Value;
             $modified = $TRUE;
         }
     }
@@ -32,3 +34,5 @@ Get-ChildItem env:* | ForEach-Object {
 if ($modified) {
     $doc.Save($webConfig);
 }
+
+iisreset start

@@ -9,6 +9,7 @@ namespace Contoso.Api.Models
     {
         public string HostName { get; set; }
         public IEnumerable<string> Data { get; set; }
+        public string Error { get; set; }
 
     }
 }
