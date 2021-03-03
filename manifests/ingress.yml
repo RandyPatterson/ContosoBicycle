@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "aksk8scluster-1447"
+    labels:
+        app: "aksk8scluster-1447"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: development-aksk8scluster-1447.28d9dc25d8294baa8292.eastus.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "aksk8scluster-1447"
+                servicePort: 80
