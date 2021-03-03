@@ -3,4 +3,6 @@
 
 ![Logo](./images/bike.jpg)
 
-
+## Description 
+Sample Application showing the integration of **GitHub** and **Azure DevOps**.  
+The Sample application is an ASP.NET MVC application hosted in IIS. 
