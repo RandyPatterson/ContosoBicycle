@@ -17,6 +17,13 @@ services:
       context: .\Contoso.Api
       dockerfile: Dockerfile
     environment:
-      CONNSTR_AnimalContext: "connection_string"
+      CONNSTR_AnimalContext: "Server=contoso-sql;Initial Catalog=ContosoBicycle;User ID=sa;Password=P@ssword123!"
+    depends_on:
+        - contoso-sql
 
+  contoso-sql:
+    image:  microsoft/mssql-server-windows-express
+    environment:
+      sa_password: "P@ssword123!"
+      ACCEPT_EULA: "Y"
 
