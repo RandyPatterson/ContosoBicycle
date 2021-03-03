@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Kubernetes", "Kubernetes", 
 	ProjectSection(SolutionItems) = preProject
 		Kubernetes\api-deployment.yaml = Kubernetes\api-deployment.yaml
 		Kubernetes\api-service.yaml = Kubernetes\api-service.yaml
-		Kubernetes\web-deploy.yaml = Kubernetes\web-deploy.yaml
+		Kubernetes\web-deployment.yaml = Kubernetes\web-deployment.yaml
 		Kubernetes\web-service.yaml = Kubernetes\web-service.yaml
 	EndProjectSection
 EndProject
