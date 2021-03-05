@@ -2,10 +2,7 @@ param (
     [string]$webConfig = "c:\inetpub\wwwroot\Web.config"
 )
 
-
-
-
-iisreset stop
+stop-service w3svc -pa
 Write-Host
 
 $doc = (Get-Content $webConfig) -as [Xml];
@@ -53,4 +50,4 @@ if ($modified) {
     $doc.Save($webConfig);
 }
 
-iisreset start
+start-service w3svc -pa
