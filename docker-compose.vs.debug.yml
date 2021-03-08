@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  contosobicycle:
+    entrypoint: "powershell c:/inetpub/wwwroot/entrypoint/Startup.ps1"
+
+  contoso.api:
+    entrypoint: "powershell c:/inetpub/wwwroot/entrypoint/Startup.ps1"
