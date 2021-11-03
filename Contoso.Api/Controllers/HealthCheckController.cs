@@ -16,7 +16,7 @@ namespace Contoso.Api.Controllers
         public IHealthCheckModel Get()
         {
             List<string> data = new List<string>();
-            var model = new HealthCheckModel { Data = data, HostName = GetLocalIPAddress() };
+            var model = new HealthCheckModel { Data = data, HostName = GetLocalIPAddress(), Error="Version 2.0" };
             try
             {
                 data.AddRange(db.Animals.Select(r => r.DisplayName).ToArray());
