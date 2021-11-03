@@ -61,8 +61,7 @@ C:\Projects\ContosoBicycle\Contoso.Api\bin\System.Web.WebPages.Deployment.xml
 C:\Projects\ContosoBicycle\Contoso.Api\bin\System.Web.WebPages.Razor.xml
 C:\Projects\ContosoBicycle\Contoso.Api\bin\Antlr3.Runtime.pdb
 C:\Projects\ContosoBicycle\Contoso.Api\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Projects\ContosoBicycle\Contoso.Api\obj\Release\Contoso.Api.csprojAssemblyReference.cache
 C:\Projects\ContosoBicycle\Contoso.Api\obj\Release\Contoso.Api.csproj.CoreCompileInputs.cache
-C:\Projects\ContosoBicycle\Contoso.Api\obj\Release\Contoso.Api.csproj.CopyComplete
 C:\Projects\ContosoBicycle\Contoso.Api\obj\Release\Contoso.Api.dll
 C:\Projects\ContosoBicycle\Contoso.Api\obj\Release\Contoso.Api.pdb
+C:\Projects\ContosoBicycle\Contoso.Api\obj\Release\Contoso.Api.csproj.AssemblyReference.cache
