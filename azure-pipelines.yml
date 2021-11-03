@@ -66,4 +66,4 @@ steps:
   inputs:
     azureSubscription: 'Visual Studio Enterprise(87238ee9-fa25-49fe-a558-72e31e56b9f4)'
     appName: 'ContosoBicycle'
-    containers: 'workshoprrp.azurecr.io/contosoapi:v1'
+    containers: 'workshoprrp.azurecr.io/contosoapi:$(Build.BuildId)'
