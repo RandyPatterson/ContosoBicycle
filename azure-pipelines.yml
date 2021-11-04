@@ -40,8 +40,11 @@ steps:
 
 - task: Docker@2
   inputs:
+    displayName: Build and Push API Image
+    command: buildAndPush
     containerRegistry: 'DockerRegistry'
     repository: 'Contosoapi'
+    tags: $(Build.BuildId)
     command: 'buildAndPush'
     Dockerfile: 'Contoso.APi/Dockerfile'
     buildContext: 'Contoso.APi'
