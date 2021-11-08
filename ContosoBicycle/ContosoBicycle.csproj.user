@@ -8,7 +8,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
-    <LastActiveSolutionConfig>Debug|Any CPU</LastActiveSolutionConfig>
+    <LastActiveSolutionConfig>Release|Any CPU</LastActiveSolutionConfig>
     <ActiveDebugTarget>ContainerToolsProjectDebugExtension</ActiveDebugTarget>
     <NameOfLastUsedPublishProfile>C:\Projects\ContosoBicycle\ContosoBicycle\Properties\PublishProfiles\docker.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
