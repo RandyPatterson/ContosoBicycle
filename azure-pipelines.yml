@@ -65,8 +65,8 @@ steps:
 #       workshoprrp.azurecr.io/contosobicycle:$(Build.BuildId)
 
 #deploy to App Service
-# - task: AzureWebAppContainer@1
-#   inputs:
-#     azureSubscription: 'Visual Studio Enterprise(87238ee9-fa25-49fe-a558-72e31e56b9f4)'
-#     appName: 'ContosoBicycle'
-#     containers: 'workshoprrp.azurecr.io/contosoapi:$(Build.BuildId)'
+- task: AzureWebAppContainer@1
+  inputs:
+    azureSubscription: 'Visual Studio Enterprise(87238ee9-fa25-49fe-a558-72e31e56b9f4)'
+    appName: 'ContosoBicycle'
+    containers: 'workshoprrp.azurecr.io/contosoapi:$(Build.BuildId)'
