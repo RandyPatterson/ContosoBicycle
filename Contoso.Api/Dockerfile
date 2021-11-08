@@ -3,9 +3,9 @@
 
 FROM mcr.microsoft.com/dotnet/framework/aspnet:4.8-windowsservercore-ltsc2019
 ARG source
-# COPY ${source:-obj/Docker/publish/entrypoint/Startup.ps1} c:/
+COPY ${source:-obj/Docker/publish/entrypoint/Startup.ps1} c:/
 # Updates web.config on startup with environment variables starting with APPSETTING_ and CONNSTR_
-# COPY ${source:-obj/Docker/publish/entrypoint/WebconfigOverride.ps1} c:/
+COPY ${source:-obj/Docker/publish/entrypoint/WebconfigOverride.ps1} c:/
 WORKDIR /inetpub/wwwroot
 COPY ${source:-obj/Docker/publish} .
-# ENTRYPOINT ["powershell.exe", "c:\\Startup.ps1"]
+ENTRYPOINT ["powershell.exe", "c:\\Startup.ps1"]
